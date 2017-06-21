@@ -44,6 +44,7 @@ return person;
 public Person savePerson(Person person) {
 Session session=sessionFactory.openSession();
 session.save(person);
+
 session.flush();
 session.close();
 return person;

@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,7 @@ import com.niit.dao.PersonDao;
 import com.niit.model.Person;
 
 @RestController
+
 public class PersonController {
 	
 @Autowired
@@ -33,11 +35,10 @@ return new ResponseEntity<List<Person>>(persons,HttpStatus.OK);
 }
 
 
-
-
 @RequestMapping(value="/saveperson",method=RequestMethod.POST)
 public ResponseEntity<Person> savePerson(@RequestBody Person person){
 person = personDao.savePerson(person);
+
 return new ResponseEntity<Person>(person,HttpStatus.CREATED);
 
 }

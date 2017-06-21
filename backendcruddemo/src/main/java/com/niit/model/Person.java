@@ -15,7 +15,7 @@ public class Person
 	private String lastname;
 	private String address;
 	private String email;
-	private int phoneNo;
+	private double phoneNo;
 	public int getId() {
 		return id;
 	}
@@ -46,10 +46,10 @@ public class Person
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public int getPhoneNo() {
+	public double getPhoneNo() {
 		return phoneNo;
 	}
-	public void setPhoneNo(int phoneNo) {
+	public void setPhoneNo(double phoneNo) {
 		this.phoneNo = phoneNo;
 	}
 }
